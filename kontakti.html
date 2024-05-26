@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Никола Карев</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="kontakti.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="nav-bar">
+        <a href="index.html">ПОЧЕТНА</a>
+        <a href="zanas.html">ЗА НАС</a>
+        <a href="struki.html">СТРУКИ</a>
+        <a href="avtoskola.html">АВТО ШКОЛА</a>
+        <a href="natavenkadar.html">НАСТАВЕН КАДАР</a>
+        <a href="kontakti.html">КОНТАКТИ</a>
+    </nav>
+    
+    <div class="main-container">
+        <div class="flex-container">
+            <div class="sidebar">
+                <div class="contact-info">
+                    <h2>Испратете Порака</h2>
+                    <form action="submit_form.php" method="post" class="contact-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fa-solid fa-signature"></i> Име и Презиме:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fa-solid fa-envelope"></i> Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fa-solid fa-message"></i> Порака:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit">Испрати</button>
+                        <div>
+                        <p class="pp"><i class="fa-solid fa-phone-volume"></i> Телефон за контакт: 034-356-898</p>
+                        <p><i class="fa-solid fa-location-dot"></i> : Ул. Маршал Тито бр.170</p>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="iframe-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.2311334555397!2d22.63287057603656!3d41.43420619308973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a9fe0e545142b3%3A0xe1aa627f4be35cd5!2zTmlrb2xhIEthcmV2LCDQodGC0YDRg9C80LjRhtCw!5e0!3m2!1smk!2smk!4v1715857131253!5m2!1smk!2smk" width="900" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+        </div>
+    </div>
+        
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:info@nkarev.edu.mk"><i class="fa-solid fa-envelope"></i> Email</a>
+            <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+        </div>
+        <p>www.nkarev-strumica.edu.mk | РЦСОО - Никола Карев, Струмица | +38975553221</p>
+    </footer>
+    <script src="web.js"></script>
+</body>
+</html>

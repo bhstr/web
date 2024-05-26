@@ -1,0 +1,240 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 40px;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  margin-left: 20px;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 51, 102, 0.9);
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  margin-right: 40px;
+}
+
+nav a {
+  padding: 15px 20px;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  font-size: 15px;
+}
+
+nav a:hover {
+  background-color: #004494;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.6s;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-bar.hidden {
+  display: none;
+  /* Alternatively, you can use `visibility: hidden;` or `opacity: 0;` depending on the desired effect */
+  transition: transform 0.5s ease;
+}
+
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Ensure consistent box-sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Style for columns */
+.column {
+  float: left;
+  width: 16.66%;
+  /* 100% / 6 columns = 16.66% */
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .column {
+      width: 33.33%;
+      /* 3 columns on medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+      width: 50%;
+      /* 2 columns on small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .column {
+      width: 100%;
+      /* 1 column on very small screens */
+  }
+}
+
+/* Style for cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px 0;
+  /* Ensure margin between cards */
+  animation: slide-down 0.5s ease-out forwards;
+  /* Apply slide-down animation and ensure forwards state */
+  opacity: 0;
+  /* Initially hide the cards */
+  transform: translateY(-20px);
+  /* Initial position for slide down */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Ensure all cards are of equal height */
+  background-color: white;
+}
+
+/* Slide down animation keyframes */
+@keyframes slide-down {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Style for container inside cards */
+.container {
+  padding: 0 16px;
+  flex: 1;
+  /* Allow the container to grow and fill the card */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clearfix for container and row */
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style for titles */
+.title {
+  color: grey;
+  font-size: 1.25em;
+  /* Adjust title size if needed */
+}
+
+/* Style for buttons */
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #003366e6;
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  transition: background-color 0.3s ease;
+  /* Add transition for hover effect */
+  margin-left: 8px;
+}
+
+.button:hover {
+  background-color: #004494;
+}
+
+/* Add specific rules for image sizes */
+.card img {
+  width: 100%;
+  height: 350px;
+  /* Set a fixed height for the images */
+  object-fit: cover;
+  /* Ensure the image covers the assigned area */
+  object-position: top;
+  /* Prioritize the top part of the image */
+  display: block;
+}
+
+.ime {
+  font-size: 25px;
+}
+
+footer {
+  background-color: #D9D9D9;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 6%;
+}
+.footer-links a {
+  color: black;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+#scrollTopBtn {
+  display: none;
+  /* Hide the button by default */
+  position: fixed;
+  /* Fixed position to stay at the bottom right corner */
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #007bff;
+  /* Button background color */
+  color: white;
+  /* Text color */
+  border: none;
+  border-radius: 50%;
+  /* Rounded shape */
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Smooth transition for background color */
+}
+
+#scrollTopBtn:hover {
+  background-color: #0056b3;
+  /* Change background color on hover */
+}
+.row{
+  margin-bottom: 20px;
+}
